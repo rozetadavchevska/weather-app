@@ -38,5 +38,17 @@ $weather-app-theme: mat.define-light-theme((
 
 body { 
   margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  padding: 0;
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background-color: #3b90cc;
+  color:#f0f8ff;
+}
+
+.root{
+  width: 90%;
 }

@@ -1,0 +1,22 @@
+.search{
+    border-color: #f0f8ff;
+    border-style: solid;
+    border-radius: 10px;
+    
+    &-input, &-btn{
+        padding: 10px;
+        font-size: 15px;
+        background-color: #3b90cc;
+        border-radius: 10px;
+        border: none;
+    }
+
+    &-input:focus{
+        color:#f0f8ff;
+        outline: none;
+    }
+
+    &-input::placeholder, &-icon{
+        color:#f0f8ff;
+    }
+}
