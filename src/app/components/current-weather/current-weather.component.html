@@ -1,0 +1,13 @@
+<div class="current">
+    <p class="current-time">{{currentDate | date: 'hh:mm'}}</p>
+    <div class="current-weather">
+        <img class="current-icon" src="assets/day_clear.svg" alt="Sunny"/>
+        <p class="current-degrees">41 °C</p>
+        <div class="current-location">
+            <fa-icon class="current-location-icon" [icon]="FaLocationIcon"></fa-icon>
+            
+            <p class="current-location-city">Veles, North Macedonia</p>
+        </div>
+        <p class="current-date">{{currentDate | date: "EEEE, dd MMM YYYY"}}</p>
+    </div>
+</div>

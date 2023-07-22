@@ -1,0 +1,54 @@
+.current{
+    width:25%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: #1a1a1a86;
+
+    &-time{
+        width: fit-content;
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 30px;
+        background-color: #96dc45; 
+        color: #000000;
+    }
+
+    &-weather{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-icon{
+        width: 40%;
+        margin: 25px 0;
+    }
+
+    &-degrees{
+        font-size: 40px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &-location{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin: 0;
+
+        &-icon{
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &-date{
+        font-size: 16px;
+        margin: 0;
+    }
+}

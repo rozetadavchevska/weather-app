@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    CurrentWeatherComponent
   ],
   imports: [
     BrowserModule,
