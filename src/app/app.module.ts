@@ -10,6 +10,7 @@ import { CurrentWeatherComponent } from './components/current-weather/current-we
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { WeeklyForecastComponent } from './components/weekly-forecast/weekly-forecast.component';
+import { DetailedWeatherComponent } from './components/detailed-weather/detailed-weather.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WeeklyForecastComponent } from './components/weekly-forecast/weekly-for
     NavbarComponent,
     SearchBarComponent,
     CurrentWeatherComponent,
-    WeeklyForecastComponent
+    WeeklyForecastComponent,
+    DetailedWeatherComponent
   ],
   imports: [
     BrowserModule,

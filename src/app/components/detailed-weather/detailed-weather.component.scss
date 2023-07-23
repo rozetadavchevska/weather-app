@@ -1,0 +1,25 @@
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #1a1a1a42;
+
+    &-row, &-wind, &-humidity,
+    &-visibility, &-pressure{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-wind, &-humidity,
+    &-visibility, &-pressure{
+        margin: 20px;
+    }
+
+    &-name{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
