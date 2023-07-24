@@ -10,9 +10,6 @@ export interface Weather{
         speed: number,
         deg: number
     },
-    rain: {
-        '1h': number
-    },
     sys: {
         country: string
     },
