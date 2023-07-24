@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { Weather } from 'src/app/models';
+import { WeatherService } from 'src/app/services/weather.service';
+
 
 @Component({
   selector: 'app-current-weather',
@@ -9,13 +12,25 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 export class CurrentWeatherComponent {
   FaLocationIcon = faLocationDot; 
   currentDate: Date = new Date();
+  weather: Weather | any;
+
+  constructor(private weatherService: WeatherService){}
 
   ngOnInit(){
     this.getCurrentTime();
+    this.getWeatherByCity("");
   }
 
   getCurrentTime(): void{
     this.currentDate = new Date();
+  }
+
+  getWeatherByCity(city: string): void{
+    this.weatherService.getWeather(city).subscribe(
+      (weatherData: Weather)=>{
+        this.weather = weatherData;
+      }
+    )
   }
 
   // getWeatherByCity(city: string): void {

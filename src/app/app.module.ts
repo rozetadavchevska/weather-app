@@ -9,7 +9,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { WeeklyForecastComponent } from './components/weekly-forecast/weekly-forecast.component';
 import { DetailedWeatherComponent } from './components/detailed-weather/detailed-weather.component';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { DetailedWeatherComponent } from './components/detailed-weather/detailed
     NavbarComponent,
     SearchBarComponent,
     CurrentWeatherComponent,
-    WeeklyForecastComponent,
     DetailedWeatherComponent
   ],
   imports: [

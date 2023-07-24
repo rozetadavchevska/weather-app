@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Weather } from 'src/app/models';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-detailed-weather',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./detailed-weather.component.scss']
 })
 export class DetailedWeatherComponent {
-
+  
 }

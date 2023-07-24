@@ -1,15 +1,14 @@
-<!-- <p class="current-text">Today</p> -->
 <div class="current">
     <p class="current-time">{{currentDate | date: 'hh:mm'}}</p>
     <div class="current-info">
         <div class="current-weather">
-            <img class="current-icon" src="assets/day_clear.svg" alt="Sunny"/>
-            <p class="current-degrees">41 °C</p>
+            <img class="current-icon" src="https://openweathermap.org/img/wn/{{ weather.weather[0].icon }}@2x.png" alt="Sunny"/>
+            <p class="current-degrees">{{weather.main.temp | number: "1.0-0"}} °C</p>
         </div>
+        <p class="current-description">{{weather.weather[0].description}}</p>
         <div class="current-location">
             <fa-icon class="current-location-icon" [icon]="FaLocationIcon"></fa-icon>
-            
-            <!-- <p class="current-location-city">{{ weatherData.name }} {{location}}</p> -->
+            <p class="current-location-city">{{weather.name}}, {{ weather.sys.country }}</p>
         </div>  
         <p class="current-date">{{currentDate | date: "EEEE, dd MMM YYYY"}}</p>  
     </div>
