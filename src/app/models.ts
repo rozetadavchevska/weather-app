@@ -22,3 +22,17 @@ export interface WeatherInfo{
     description: string,
     icon: string
 }
+
+export interface Forecast{
+    list: ForecastInfo[]
+}
+
+export interface ForecastInfo{
+    weather: WeatherInfo[],
+    dt: Date,
+    main:{
+        temp: number,
+        temp_max: number
+    },
+    dt_txt: string
+}

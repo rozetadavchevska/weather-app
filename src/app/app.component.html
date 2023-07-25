@@ -1,6 +1,12 @@
 <app-navbar></app-navbar>
 
 <div class="weather">
-  <app-current-weather class="weather-current"></app-current-weather>
-  <app-detailed-weather class="weather-details"></app-detailed-weather>
+  <div class="weather-row">
+    <app-current-weather routerLink="/current" class="weather-current"></app-current-weather>
+    <app-weekly-weather routerLink="/weekly"  class="weather-weekly"></app-weekly-weather>
+  </div>
+  <div class="weather-row">
+    <app-detailed-weather routerLink="/details" class="weather-details"></app-detailed-weather>
+  </div>
 </div>
+

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { Weather } from 'src/app/models';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,29 +9,28 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent {
- FaSearch = faMagnifyingGlass;
+  FaSearch = faMagnifyingGlass;
 
-//  cityName: string = '';
-//  location: string = '';
-//  temperature: number = 0;
+  cityName: string | any;
+  location: string  | any;
+  temperature: number  | any;
 
-//   constructor(private weatherService: WeatherService) {}
+  weather: Weather | undefined;
 
-//   searchWeatherByCity() {
-//     if (this.cityName.trim() !== '') {
-//       const city = this.cityName.trim(); // Trim the city name
+  constructor(private weatherService: WeatherService) {}
 
-//       this.weatherService.getWeatherByCityName(city).subscribe(
-//         (weatherData: WeatherData) => {
-//           // Process weatherData and set the location, temperature, and other properties.
-//           this.location = weatherData.name + ', ' + weatherData.sys.country;
-//           this.temperature = weatherData.main.temp;
-//           // Add more assignments for other properties based on the WeatherData model
-//         },
-//         (error: any) => {
-//           console.error('Error fetching weather data for the city: ', error);
-//         }
-//       );
-//     }
-//   }
+  // search(city: string) {
+  //   this.weatherService.getWeather(city).subscribe(weather => this.weather = weather);
+  // }
+
+  search(city: string) {
+      this.weatherService.getWeather(city).subscribe(
+        (weather: Weather) => {
+          this.weather = weather;
+        },
+        (error: any) => {
+          console.error('Error fetching weather data for the city: ', error);
+        }
+      );
+   }
 }

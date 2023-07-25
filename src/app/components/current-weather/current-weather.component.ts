@@ -3,7 +3,6 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Weather } from 'src/app/models';
 import { WeatherService } from 'src/app/services/weather.service';
 
-
 @Component({
   selector: 'app-current-weather',
   templateUrl: './current-weather.component.html',
@@ -12,8 +11,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class CurrentWeatherComponent {
   FaLocationIcon = faLocationDot; 
   currentDate: Date = new Date();
-  weather: Weather | any;
-  location: string | any;
+  weather!: Weather;
 
   constructor(private weatherService: WeatherService){}
 
@@ -48,13 +46,13 @@ export class CurrentWeatherComponent {
         (error) => {
           console.error('Error getting geolocation: ', error);
           // Handle the error gracefully here, e.g., show a default location or ask the user to enter their location manually.
-          this.getWeatherByCity('Skopje'); // Default location
+          this.getWeatherByCity('Skopje');
         }
       );
     } else {
       console.error('Geolocation is not available in this browser.');
       // Handle the case where geolocation is not supported in the browser.
-      this.getWeatherByCity('Skopje'); // Default location
+      this.getWeatherByCity('Skopje');
     }
   }
 
