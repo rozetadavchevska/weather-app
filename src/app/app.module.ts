@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DetailedWeatherComponent } from './components/detailed-weather/detailed-weather.component';
 import { WeeklyWeatherComponent } from './components/weekly-weather/weekly-weather.component';
+import { UnixToUtcPipe } from './unix-to-utc.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WeeklyWeatherComponent } from './components/weekly-weather/weekly-weath
     SearchBarComponent,
     CurrentWeatherComponent,
     DetailedWeatherComponent,
-    WeeklyWeatherComponent
+    WeeklyWeatherComponent,
+    UnixToUtcPipe
   ],
   imports: [
     BrowserModule,

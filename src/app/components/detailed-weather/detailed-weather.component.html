@@ -1,12 +1,12 @@
 <div class="details">
     <div class="details-row">
         <div class="details-wind">
-            <p class="details-name">Wind</p>
+            <p class="details-name">Wind Speed</p>
             <p>{{weatherDetails.wind.speed}} m/s</p>
         </div>
-        <div class="details-humidity">
-            <p class="details-name">Humidity</p>
-            <p>{{weatherDetails.main.humidity}} %</p>
+        <div class="details-wind">
+            <p class="details-name">Wind Degree</p>
+            <p>{{weatherDetails.wind.deg}} °</p>
         </div>
     </div>
     <div class="details-row">
@@ -17,6 +17,36 @@
         <div class="details-pressure">
             <p class="details-name">Pressure</p>
             <p>{{weatherDetails.main.pressure}} hPa</p>
+        </div>
+    </div>
+    <div class="details-row">
+        <div class="details-sea">
+            <p class="details-name">Sea Level</p>
+            <p>{{weatherDetails.main.sea_level}} hPa</p>
+        </div>
+        <div class="details-ground">
+            <p class="details-name">Ground Level</p>
+            <p>{{weatherDetails.main.grnd_level}} hPa</p>
+        </div>
+    </div> 
+    <div class="details-row">
+        <div class="details-sunrise">
+            <p class="details-name">Sunrise</p>
+            <p>{{weatherDetails.sys.sunrise | unixToUtc}}</p>
+        </div>
+        <div class="details-sunset">
+            <p class="details-name">Sunset</p>
+            <p>{{weatherDetails.sys.sunset | unixToUtc}}</p>
+        </div>
+    </div>
+    <div class="details-row">
+        <div class="details-humidity">
+            <p class="details-name">Humidity</p>
+            <p>{{weatherDetails.main.humidity}} %</p>
+        </div>
+        <div class="details-clouds">
+            <p class="details-name">Cloudiness</p>
+            <p>{{weatherDetails.clouds.all}} %</p>
         </div>
     </div>
 </div>

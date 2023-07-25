@@ -39,7 +39,4 @@ export class DetailedWeatherComponent {
         this.weatherDetails = weatherData;
     })
   }
-
-
-
 }

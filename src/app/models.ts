@@ -3,15 +3,22 @@ export interface Weather{
     main: {
         temp: number,
         pressure: number,
-        humidity: number
+        humidity: number,
+        sea_level: number,
+        grnd_level: number
     },
     visibility: number,
     wind: {
         speed: number,
         deg: number
     },
+    clouds: {
+        all: number
+    },
     sys: {
-        country: string
+        country: string,
+        sunrise: number,
+        sunset: number
     },
     name: string,
     id: number
