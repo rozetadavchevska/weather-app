@@ -2,21 +2,21 @@
     <div class="details-row">
         <div class="details-wind">
             <p class="details-name">Wind</p>
-            <p>5 km/h</p>
+            <p>{{weatherDetails.wind.speed}} m/s</p>
         </div>
         <div class="details-humidity">
             <p class="details-name">Humidity</p>
-            <p>10%</p>
+            <p>{{weatherDetails.main.humidity}} %</p>
         </div>
     </div>
     <div class="details-row">
         <div class="details-visibility">
             <p class="details-name">Visibility</p>
-            <p>0</p>
+            <p>{{weatherDetails.visibility}} m</p>
         </div>
         <div class="details-pressure">
             <p class="details-name">Pressure</p>
-            <p>1012 Pa</p>
+            <p>{{weatherDetails.main.pressure}} hPa</p>
         </div>
     </div>
 </div>
