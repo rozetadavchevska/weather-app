@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DetailedWeatherComponent } from './components/detailed-weather/detailed-weather.component';
 import { WeeklyWeatherComponent } from './components/weekly-weather/weekly-weather.component';
-import { UnixToUtcPipe } from './unix-to-utc.pipe';
+import { UnixToUtcPipe } from './pipes/unix-to-utc.pipe';
+import { SharedCityService } from './services/shared-city.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { UnixToUtcPipe } from './unix-to-utc.pipe';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SharedCityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

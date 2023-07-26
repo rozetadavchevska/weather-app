@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Weather } from 'src/app/models';
+import { SharedCityService } from 'src/app/services/shared-city.service';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -12,12 +13,20 @@ export class CurrentWeatherComponent {
   FaLocationIcon = faLocationDot; 
   currentDate: Date = new Date();
   weather!: Weather;
+  city: string = '';
 
-  constructor(private weatherService: WeatherService){}
+  constructor(
+    private weatherService: WeatherService,
+    private sharedCityService: SharedCityService
+  ) {}
 
   ngOnInit(){
     this.getCurrentTime();
     this.getGeolocation();
+
+    this.sharedCityService.currentWeather$.subscribe((weather) => {
+      this.weather = weather;
+    });
   }
 
   getCurrentTime(): void{

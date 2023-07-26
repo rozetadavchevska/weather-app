@@ -20,14 +20,14 @@ export class WeatherService {
 
   getForecast(city: string): Observable<Forecast> {
     const url = `${this.apiBaseUrl}/forecast?q=${city}&appid=${this.apiKey}&units=metric`;
-    console.log("5day weather");
     return this.http.get<Forecast>(url).pipe(
-        map((data: any) => {
-            return data.list.filter((item: any) => {
-                return item.dt_txt.includes("12:00:00"); // Filter to include only the 12:00:00 forecast for each day
-            });
-        }),
-        catchError(this.handleError)
+      map((data: Forecast) =>
+        data = {
+          ...data,
+          list: data.list.filter(item => item.dt_txt.includes('12:00:00'))
+        }
+      ),
+      catchError(this.handleError)
     );
   }
 

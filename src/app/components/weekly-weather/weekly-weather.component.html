@@ -1,6 +1,6 @@
 <p class="weekly-text">Next 5 days</p>
 <div class="weekly">
-    <div class="weekly-day" *ngFor="let forecast of forecastData.list">
+    <div class="weekly-day" *ngFor="let forecast of forecast.list">
         <p class="weekly-day-name">{{ forecast.dt_txt | date:'EEEE' }}</p>
         <p class="weekly-time">{{ forecast.dt_txt | date: 'HH:mm'}} </p>
         <img class="weekly-icon" [src]="'https://openweathermap.org/img/wn/' + forecast.weather[0].icon + '.png'" alt="{{forecast.weather[0].description}}">

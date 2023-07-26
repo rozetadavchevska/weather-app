@@ -1,11 +1,11 @@
 <div class="search">
-    <form class="search-form" (ngSubmit)="search(cityName.value)">
+    <form class="search-form" (ngSubmit)="search(city)">
         <input
             class="search-input"
             type="search"
             placeholder="Search city..."
             name="cityName"
-            (keydown.enter)="search(cityName.value)"
+            [(ngModel)]="city"
         />  
         <button class="search-btn" type="submit"><fa-icon class="search-icon" [icon]="FaSearch"></fa-icon></button>
     </form> 

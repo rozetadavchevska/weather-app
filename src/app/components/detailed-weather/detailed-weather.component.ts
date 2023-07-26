@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Weather } from 'src/app/models';
+import { SharedCityService } from 'src/app/services/shared-city.service';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
@@ -10,10 +11,17 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class DetailedWeatherComponent {
   weatherDetails!: Weather;
   
-  constructor(private weatherService: WeatherService){}
+  constructor(
+    private weatherService: WeatherService, 
+    private sharedCityService:SharedCityService
+  ){}
 
   ngOnInit(){
     this.getGeolocation();
+
+    this.sharedCityService.currentWeather$.subscribe((weather) => {
+      this.weatherDetails = weather;
+    });
   }
 
   getGeolocation() {

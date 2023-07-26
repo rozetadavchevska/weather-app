@@ -1,6 +1,6 @@
 <div class="current">
     <p class="current-time">{{currentDate | date: 'HH:mm'}}</p>
-    <div class="current-info">
+    <div class="current-info" *ngIf="weather">
         <div class="current-weather">
             <img class="current-icon" [src]="'https://openweathermap.org/img/wn/' +  weather.weather[0].icon + '@2x.png'" alt="{{weather.weather[0].description}}"/>
             <p class="current-degrees">{{weather.main.temp | number: "1.0-0"}} °C</p>
