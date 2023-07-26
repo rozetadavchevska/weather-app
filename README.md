@@ -1,27 +1,35 @@
-# WeatherApp
+<div id="top"></div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+<!-- PROJECT LOGO -->
+<div align="center">
+<a href="https://github.com/rozetadavchevska/weather-app">
+    <img src="./src/assets/logo.png" alt="Logo" width="300px" align="center">
+</a>
+<h3 align="center">Weatherly</h3>
 
-## Development server
+<p align="center">
+    Plan your days ahead
+    <br />
+</p>
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This Angular-based website utilizes the OpenWeather API to provide users with up-to-date weather information. It offers real-time weather data, current weather conditions, and a 5-day forecast, making it a handy tool for planning your days ahead.
 
-## Code scaffolding
+## Features
+- View the current weather conditions including temperature, humidity, wind speed, and weather description.
+- Get a 5-day forecast to help you plan for the upcoming week.
+- Search functionality to find weather details for any location.
+- Clean and user-friendly interface for easy navigation.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+- [Angular](https://angular.io/)
+- [OpenWeather API](https://openweathermap.org/api)
 
-## Build
+<!-- CONTACT -->
+## Contact
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Rozeta Davchevska <br>
+<a href="mailto:rozetadavchevska@gmail.com"><img height="28" width="28" align="center" style="margin:5px;" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"/></a> rozetadavchevska@gmail.com <br>
+<a href="https://www.linkedin.com/in/rozetadavchevska/"><img height="28" width="28" align="center" style="margin:5px;" src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg"/></a> [LinkedIn](https://linkedin.com/in/rozetadavchevska)<br>
